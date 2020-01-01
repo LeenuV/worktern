@@ -1,0 +1,167 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "workternApp": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/workternApp",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css",
+              "src/assets/css/fontawesome/fontawesome-all.css",
+              "src/assets/css/basictable.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/chosen.css",
+              "src/assets/css/color.css",
+              "src/assets/css/dashboard.css",
+              "src/assets/css/dbresponsive.css",
+              "src/assets/css/font-awesome.min.css",
+              "src/assets/css/jquery-ui.css",
+              "src/assets/css/linearicons.css",
+              "src/assets/css/main.css",
+              "src/assets/css/normalize.css",
+              "src/assets/css/owl.carousel.min.css",
+              "src/assets/css/prettyPhoto.css",
+              "src/assets/css/responsive.css",
+              "src/assets/css/scrollbar.css",
+              "src/assets/css/themify-icons.css",
+              "src/assets/css/tipso.css"
+            ],
+            "scripts": [
+              "src/assets/js/tinymce/tinymce.min4bb5.js",
+              "src/assets/js/vendor/bootstrap.min.js",
+              "src/assets/js/vendor/jquery-3.3.1.js",
+              "src/assets/js/vendor/jquery-library.js",
+              "src/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js",
+              "src/assets/js/appear.js",
+              "src/assets/js/chart.js",
+              "src/assets/js/chosen.jquery.js",
+              "src/assets/js/countdown.min.js",
+              "src/assets/js/countTo.js",
+              "src/assets/js/gmap3.js",
+              "src/assets/js/jquery-ui.js",
+              "src/assets/js/jquery.basictable.min.js",
+              "src/assets/js/jquery.hoverdir.js",
+              "src/assets/js/jquery.sortable.js",
+              "src/assets/js/jRate.js",
+              "src/assets/js/main.js",
+              "src/assets/js/owl.carousel.min.js",
+              "src/assets/js/prettyPhoto.js",
+              "src/assets/js/readmore.js",
+              "src/assets/js/scrollbar.min.js",
+              "src/assets/js/tilt.jquery.js",
+              "src/assets/js/tipso.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "workternApp:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "workternApp:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "workternApp:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "workternApp:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "workternApp:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "defaultProject": "workternApp"
+}

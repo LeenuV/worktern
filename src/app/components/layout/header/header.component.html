@@ -1,0 +1,233 @@
+<header id="wt-header" class="wt-header wt-haslayout">
+				<div class="wt-navigationarea">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								<strong class="wt-logo"><a [routerLink]="['index']"><img src="./assets/images/logo.png" alt="company logo here"></a></strong>
+								<div class="wt-rightarea">
+									<nav id="wt-nav" class="wt-nav navbar-expand-lg">
+										<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+											<i class="lnr lnr-menu"></i>
+										</button>
+										<div class="collapse navbar-collapse wt-navigation" id="navbarNav">
+											<ul class="navbar-nav">
+												<li class="menu-item-has-children page_item_has_children">
+													<a [routerLink]="['javascript']">Main</a>
+													<ul class="sub-menu">
+														<li class="menu-item-has-children page_item_has_children wt-notificationicon"><span class="wt-dropdowarrow"><i class="lnr lnr-chevron-right"></i></span>
+															<a [routerLink]="['javascript']">Home</a>
+															<ul class="sub-menu">
+																<li><a [routerLink]="['index']">Home v1</a></li>
+																<li class="wt-newnoti"><a [routerLink]="['indexvtwo']">Home v2<em>without login</em></a></li>
+															</ul>
+														</li>
+														<li class="menu-item-has-children page_item_has_children"><span class="wt-dropdowarrow"><i class="lnr lnr-chevron-right"></i></span>
+															<a [routerLink]="['javascript']">Article</a>
+															<ul class="sub-menu">
+																<li><a [routerLink]="['articlelist']">Article List</a></li>
+																<li><a [routerLink]="['articlegrid']">Article Grid</a></li>
+																<li><a [routerLink]="['articlesingle']">Article Single</a></li>
+																<li><a [routerLink]="['articleclassic']">Article Classic</a></li>
+															</ul>
+														</li>
+														<li class="menu-item-has-children page_item_has_children"><span class="wt-dropdowarrow"><i class="lnr lnr-chevron-right"></i></span>
+															<a [routerLink]="['javascript']">Company</a>
+															<ul class="sub-menu">
+																<li><a [routerLink]="['companygrid']">Company Grid</a></li>
+																<li><a [routerLink]="['companysigle']">Company Sigle</a></li>
+															</ul>
+														</li>
+														<li>
+															<a [routerLink]="['about']">About</a>
+														</li>
+														<li>
+															<a [routerLink]="['privacypolicy']">Privacy Policy</a>
+														</li>
+														<li>
+															<a [routerLink]="['comingsoon']">Coming Soon</a>
+														</li>
+														<li>
+															<a [routerLink]="['page404']">404page</a>
+														</li>
+													</ul>
+												</li>
+												<li class="nav-item">
+													<a [routerLink]="['howitworks']">How It Works</a>
+												</li>
+												<li class="menu-item-has-children page_item_has_children">
+													<a [routerLink]="['javascript']">Browse Jobs</a>
+													<ul class="sub-menu">
+														<li>
+															<a [routerLink]="['joblisting']">Job Listing</a>
+														</li>
+														<li class="current-menu-item">
+															<a [routerLink]="['jobsingle']">Job Single</a>
+														</li>
+														<li>
+															<a [routerLink]="['jobproposal']">Job Proposal</a>
+														</li>
+													</ul>
+												</li>
+												<li class="menu-item-has-children page_item_has_children">
+													<a [routerLink]="['javascript']">View Freelancers</a>
+													<ul class="sub-menu">
+														<li>
+															<a [routerLink]="['userlisting']">User Listing</a>
+														</li>
+														<li class="current-menu-item">
+															<a [routerLink]="['usersingle']">User Single</a>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</nav>
+									<div class="wt-loginarea">
+										<figure class="wt-userimg">
+											<img src="./assets/images/user-login.png" alt="img description">
+										</figure>
+										<div class="wt-loginoption">
+											<a [routerLink]="['javascript']" id="wt-loginbtn" class="wt-loginbtn">Login</a>
+											<div class="wt-loginformhold">
+												<div class="wt-loginheader">
+													<span>Login</span>
+													<a [routerLink]="['javascript']"><i class="fa fa-times"></i></a>
+												</div>
+												<form class="wt-formtheme wt-loginform do-login-form">
+													<fieldset>
+														<div class="form-group">
+															<input type="text" name="username" class="form-control" placeholder="Username">
+														</div>
+														<div class="form-group">
+															<input type="password" name="password" class="form-control" placeholder="Password">
+														</div>
+														<div class="wt-logininfo">
+															<a [routerLink]="['javascript']" class="wt-btn do-login-button">Login</a>
+															<span class="wt-checkbox">
+																<input id="wt-login" type="checkbox" name="rememberme">
+																<label for="wt-login">Keep me logged in</label>
+															</span>
+														</div>
+													</fieldset>
+													<div class="wt-loginfooterinfo">
+														<a [routerLink]="['javascript']" class="wt-forgot-password">Forgot password?</a>
+														<a [routerLink]="['register']">Create account</a>
+													</div>
+												</form>
+											    <form class="wt-formtheme wt-loginform do-forgot-password-form wt-hide-form">
+											        <fieldset>
+											            <div class="form-group">
+											                <input type="email" name="email" class="form-control get_password" placeholder="Email">
+											            </div>
+											           
+											            <div class="wt-logininfo">
+											                <a [routerLink]="['javascript']" class="wt-btn do-get-password">Get Pasword</a>
+											            </div>     
+											        </fieldset>
+											        <div class="wt-loginfooterinfo">
+											            <a [routerLink]="['javascript']" class="wt-show-login">Login</a>
+											            <a [routerLink]="['register']">Create account</a>
+											        </div>
+											    </form>
+											</div>
+										</div>
+										<a [routerLink]="['register']" class="wt-btn">Join Now</a>
+									</div>
+									<div class="wt-userlogedin">
+										<figure class="wt-userimg">
+											<img src="./assets/images/user-img.jpg" alt="image description">
+										</figure>
+										<div class="wt-username">
+											<h3>Louanne Mattioli</h3>
+											<span>Amento Tech</span>
+										</div>
+										<nav class="wt-usernav">
+											<ul>
+												<li class="menu-item-has-children page_item_has_children">
+													<a [routerLink]="['javascript']">
+														<span>Insights</span>
+													</a>
+													<ul class="sub-menu children">
+														<li><a [routerLink]="['dashboard-insights']">Insights</a></li>
+														<li><a [routerLink]="['dashboard-insightsuser']">Insights User</a></li>
+													</ul>
+												</li>
+												<li>
+													<a [routerLink]="['dashboard-profile']">
+														<span>My Profile</span>
+													</a>
+												</li>
+												<li class="menu-item-has-children">
+													<a [routerLink]="['javascript']">
+														<span>All Jobs</span>
+													</a>
+													<ul class="sub-menu">
+														<li><a [routerLink]="['dashboard-completejobs']" >Completed Jobs</a></li>
+														<li><a [routerLink]="['dashboard-canceljobs']" >Cancelled Jobs</a></li>
+														<li><a [routerLink]="['dashboard-ongoingjob']" >Ongoing Jobs</a></li>
+														<li><a [routerLink]="['dashboard-ongoingsingle']">Ongoing Single</a></li>
+													</ul>
+												</li>
+												<li>
+													<a [routerLink]="['dashboard-managejobs']">
+														<span>Manage Jobs</span>
+													</a>
+												</li>
+												<li class="wt-notificationicon menu-item-has-children">
+													<a [routerLink]="['javascript']">
+														<span>Messages</span>
+													</a>
+													<ul class="sub-menu">
+														<li><a [routerLink]="['dashboard-messages']">Messages</a></li>
+														<li><a [routerLink]="['dashboard-messages2']">Messages V 2</a></li>
+													</ul>
+												</li>
+												<li>
+													<a [routerLink]="['dashboard-saveitems']">
+														<span>My Saved Items</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['dashboard-invocies']" >
+														<span>Invoices</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['dashboard-category']" >
+														<span>Category</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['dashboard-packages']">
+														<span>Packages</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['dashboard-proposals']">
+														<span>Proposals</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['dashboard-accountsettings']">
+														<span>Account Settings</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['dashboard-helpsupport']">
+														<span>Help &amp; Support</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['index']">
+														<span>Logout</span>
+													</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
