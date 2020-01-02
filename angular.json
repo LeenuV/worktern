@@ -25,6 +25,7 @@
             ],
             "styles": [
               "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/css/fontawesome/fontawesome-all.css",
               "src/assets/css/basictable.css",
               "src/assets/css/bootstrap.min.css",
@@ -45,6 +46,9 @@
               "src/assets/css/tipso.css"
             ],
             "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",  
+              "./node_modules/popper.js/dist/umd/popper.min.js",  
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
               "src/assets/js/tinymce/tinymce.min4bb5.js",
               "src/assets/js/vendor/bootstrap.min.js",
               "src/assets/js/vendor/jquery-3.3.1.js",
